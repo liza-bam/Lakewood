@@ -64,7 +64,7 @@
   .lw-hero__actions > button { flex: 1 1 0; max-width: 220px; justify-content: center; }
   /* ----- Mobile hero (≤760px) per design handoff: sky photo, glass hidden, sized to content ----- */
   @media (max-width: 760px) {
-    .lw-hero__actions > button { max-width: none; }
+    .lw-hero__actions > button { max-width: none !important; width: 100% !important; }
     .lw-hero { min-height: auto !important; flex-direction: column !important; align-items: stretch !important; }
     .lw-hero__bg--desk { display: none !important; }
     .lw-hero__bg--mob { display: block !important; }
@@ -75,7 +75,7 @@
     .lw-hero__sub { display: none !important; }
     .lw-hero__logo { height: clamp(86px, 24vw, 128px) !important; }
     .lw-hero__title { font-size: clamp(2.75rem, 13.5vw, 5rem) !important; line-height: 0.98 !important; max-width: none !important; padding-bottom: 0.12em !important; }
-    .lw-hero__actions { gap: var(--space-3) !important; }
+    .lw-hero__actions { gap: var(--space-3) !important; flex-direction: column !important; align-items: stretch !important; }
     /* Keep the price line on a single line on mobile */
     .lw-hero__price > * { font-size: clamp(12px, 3.4vw, 15px) !important; letter-spacing: 0.1em !important; white-space: nowrap !important; }
   }

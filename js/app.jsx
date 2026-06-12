@@ -119,7 +119,7 @@
         <div style={{ maxWidth: 'var(--container-max)', margin: '0 auto', padding: 'var(--space-16) var(--container-pad) var(--space-8)' }}>
           <div style={{ display: 'grid', gridTemplateColumns: '1.4fr 1fr 1fr 1fr auto', gap: 'var(--space-10)', alignItems: 'start' }}>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-4)' }}>
-              <img src="assets/logos/lockup-stacked-transparent.png" alt="Lakewood Camps" style={{ height: '88px', width: 'auto' }} />
+              <img src="assets/logos/lockup-stacked-transparent.png" alt="Lakewood Camps" style={{ height: '88px', width: 'auto', alignSelf: 'flex-start' }} />
               <p style={{ maxWidth: '32ch', fontSize: 'var(--text-small)', lineHeight: 'var(--leading-body)', color: 'var(--text-secondary)' }}>Maine&rsquo;s original sporting camp, reached by boat across Lower Richardson Lake. Est. 1853.</p>
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-3)' }}>
