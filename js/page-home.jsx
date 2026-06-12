@@ -14,14 +14,14 @@
           <div className="lw-hero__topfade" style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(244,241,232,0.42) 0%, rgba(244,241,232,0) 26%)' }}></div>
           <div className="lw-hero__inner" style={{ position: 'relative', width: '100%', maxWidth: 'var(--container-max)', margin: '0 auto', padding: 'var(--space-12) var(--container-pad)', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 'var(--space-5)' }}>
             <img className="lw-hero__logo" src="assets/logos/lockup-horizontal-transparent.png" alt="Lakewood Camps — Rapid River, ME" style={{ height: '72px', width: 'auto' }} />
-            <Eyebrow className="lw-hero__eyebrow" color="ember">{['Lower Richardson Lake', 'Rapid River', 'Est. 1853']}</Eyebrow>
+            <div className="lw-hero__eyebrow"><Eyebrow color="ember">{['Lower Richardson Lake', 'Rapid River', 'Est. 1853']}</Eyebrow></div>
             <h1 className="lw-hero__title" style={{ fontSize: 'clamp(2.6rem, 5vw, 70px)', lineHeight: 1.0, color: 'var(--text-heading)', maxWidth: '17ch', paddingBottom: '0.55em' }}>Making dreams come true on the Rapid River since 1853.</h1>
             <p className="lw-hero__subtitle" style={{ fontSize: 'clamp(1.3rem, 2.4vw, 30px)', fontWeight: 600, color: 'rgba(56,41,14,0.72)', maxWidth: '34ch', lineHeight: 1.2, paddingBottom: '20px', width: "450px" }}>Proudly continuing our legacy as the oldest sporting camp in Maine.</p>
             <div className="lw-hero__ctas" style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-4)', marginTop: 'var(--space-2)', flexWrap: 'wrap' }}>
               <Button variant="accent" size="lg" arrow onClick={onReserve} style={{ whiteSpace: 'nowrap' }}>Reserve today</Button>
-              <Button className="lw-hero__plan" variant="brown" size="lg" onClick={() => go('plan')} style={{ whiteSpace: 'nowrap' }}>Plan your trip</Button>
+              <div className="lw-hero__plan"><Button variant="brown" size="lg" onClick={() => go('plan')} style={{ whiteSpace: 'nowrap' }}>Plan your trip</Button></div>
             </div>
-            <Eyebrow className="lw-hero__price" color="quiet" style={{ fontSize: '20px', fontWeight: 700, color: 'rgba(45,29,7,0.5)' }}>$600 / person / day · all-inclusive</Eyebrow>
+            <div className="lw-hero__price"><Eyebrow color="quiet" style={{ fontSize: '20px', fontWeight: 700, color: 'rgba(45,29,7,0.5)' }}>$600 / person / day · all-inclusive</Eyebrow></div>
           </div>
         </section>
 
