@@ -8,17 +8,21 @@
     return (
       <React.Fragment>
         {/* HERO */}
-        <section data-screen-label="Hero" style={{ position: 'relative', minHeight: '78vh', display: 'flex', alignItems: 'flex-end', overflow: 'hidden' }}>
-          <img src="assets/photos/hero-dock-2.jpg" alt="Guests on the dock at golden hour, Lower Richardson Lake" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
-          {/* Frosted-glass gradient covering ONLY the bottom band */}
-          <div style={{ position: 'absolute', left: 0, right: 0, bottom: 0, height: '55%', background: 'linear-gradient(180deg, rgba(244,241,232,0) 0%, rgba(244,241,232,0.55) 38%, rgba(244,241,232,0.88) 100%)', backdropFilter: 'blur(10px)', WebkitBackdropFilter: 'blur(10px)', WebkitMaskImage: 'linear-gradient(180deg, rgba(0,0,0,0) 0%, #000 38%, #000 100%)', maskImage: 'linear-gradient(180deg, rgba(0,0,0,0) 0%, #000 38%, #000 100%)' }}></div>
-          <div style={{ position: 'relative', width: '100%', padding: 'var(--space-6) var(--space-5)', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 'var(--space-4)' }}>
-            <img src="assets/logos/lockup-horizontal-transparent.png" alt="Lakewood Camps — Rapid River, ME" style={{ height: '72px', width: 'auto' }} />
-            <h1 style={{ fontSize: 'clamp(3.4rem, 12vw, 168px)', lineHeight: 0.95, color: 'var(--text-heading)', width: '100%', paddingBottom: '0.25em', margin: 0 }}>Making dreams come true on the Rapid River since 1853.</h1>
+        <section data-screen-label="Hero" style={{ position: 'relative', minHeight: '72vh', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', overflow: 'hidden' }}>
+          <img src="assets/photos/hero-dock-2.jpg" alt="Guests on the dock at golden hour, Lower Richardson Lake" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 78%' }} />
+          {/* Frosted-glass gradient covering the dock area (bottom 70%) */}
+          <div style={{ position: 'absolute', left: 0, right: 0, bottom: 0, height: '70%', background: 'linear-gradient(180deg, rgba(244,241,232,0) 0%, rgba(244,241,232,0.6) 38%, rgba(244,241,232,0.9) 100%)', backdropFilter: 'blur(10px)', WebkitBackdropFilter: 'blur(10px)', WebkitMaskImage: 'linear-gradient(180deg, rgba(0,0,0,0) 0%, #000 32%, #000 100%)', maskImage: 'linear-gradient(180deg, rgba(0,0,0,0) 0%, #000 32%, #000 100%)' }}></div>
+          {/* Top — logo pinned to very top */}
+          <div style={{ position: 'relative', width: '100%', padding: 'var(--space-3) var(--space-5) 0', display: 'flex', justifyContent: 'flex-start' }}>
+            <img src="assets/logos/lockup-horizontal-transparent.png" alt="Lakewood Camps — Rapid River, ME" style={{ height: '88px', width: 'auto' }} />
+          </div>
+          {/* Bottom — title, CTA, price (inside the glass band) */}
+          <div style={{ position: 'relative', width: '100%', padding: 'var(--space-8) var(--space-5) var(--space-6)', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 'var(--space-4)' }}>
+            <h1 style={{ fontSize: 'clamp(4.5rem, 17vw, 240px)', lineHeight: 0.92, color: 'var(--text-heading)', width: '100%', paddingBottom: '0.15em', margin: 0 }}>Making dreams come true on the Rapid River since 1853.</h1>
             <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-4)', flexWrap: 'wrap' }}>
               <Button variant="accent" size="lg" arrow onClick={onReserve} style={{ whiteSpace: 'nowrap' }}>Reserve today</Button>
             </div>
-            <Eyebrow color="quiet" style={{ fontSize: '20px', fontWeight: 700, color: 'rgba(45,29,7,0.5)' }}>$600 / person / day · all-inclusive</Eyebrow>
+            <Eyebrow color="quiet" style={{ fontSize: 'clamp(13px, 3.2vw, 20px)', fontWeight: 700, color: 'rgba(45,29,7,0.5)', whiteSpace: 'nowrap' }}>$600 / person / day · all-inclusive</Eyebrow>
           </div>
         </section>
 
