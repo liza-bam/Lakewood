@@ -8,18 +8,15 @@
     return (
       <React.Fragment>
         {/* HERO */}
-        <section data-screen-label="Hero" style={{ position: 'relative', minHeight: '58vh', display: 'flex', alignItems: 'center', overflow: 'hidden' }}>
+        <section data-screen-label="Hero" style={{ position: 'relative', minHeight: '58vh', display: 'flex', alignItems: 'flex-end', overflow: 'hidden' }}>
           <img src="assets/photos/hero-dock-2.jpg" alt="Guests on the dock at golden hour, Lower Richardson Lake" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
-          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(100deg, rgba(244,241,232,0.7) 0%, rgba(244,241,232,0.52) 34%, rgba(244,241,232,0.14) 60%, rgba(244,241,232,0) 78%)', backdropFilter: 'blur(8px)', WebkitBackdropFilter: 'blur(8px)', WebkitMaskImage: 'linear-gradient(100deg, #000 0%, #000 40%, rgba(0,0,0,0) 72%)', maskImage: 'linear-gradient(100deg, #000 0%, #000 40%, rgba(0,0,0,0) 72%)' }}></div>
-          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(244,241,232,0.42) 0%, rgba(244,241,232,0) 26%)' }}></div>
-          <div style={{ position: 'relative', width: '100%', maxWidth: 'var(--container-max)', margin: '0 auto', padding: 'var(--space-12) var(--container-pad)', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 'var(--space-5)' }}>
+          {/* Frosted-glass gradient covering only the lower half of the image */}
+          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(244,241,232,0) 0%, rgba(244,241,232,0) 35%, rgba(244,241,232,0.65) 62%, rgba(244,241,232,0.85) 100%)', backdropFilter: 'blur(8px)', WebkitBackdropFilter: 'blur(8px)', WebkitMaskImage: 'linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 38%, #000 62%, #000 100%)', maskImage: 'linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 38%, #000 62%, #000 100%)' }}></div>
+          <div style={{ position: 'relative', width: '100%', padding: 'var(--space-6) var(--space-5)', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 'var(--space-4)' }}>
             <img src="assets/logos/lockup-horizontal-transparent.png" alt="Lakewood Camps — Rapid River, ME" style={{ height: '72px', width: 'auto' }} />
-            <Eyebrow color="ember">{['Lower Richardson Lake', 'Rapid River', 'Est. 1853']}</Eyebrow>
-            <h1 style={{ fontSize: 'clamp(2.6rem, 5vw, 70px)', lineHeight: 1.0, color: 'var(--text-heading)', maxWidth: '17ch', paddingBottom: '0.55em' }}>Making dreams come true on the Rapid River since 1853.</h1>
-            <p style={{ fontSize: 'clamp(1.3rem, 2.4vw, 30px)', fontWeight: 600, color: 'rgba(56,41,14,0.72)', maxWidth: '34ch', lineHeight: 1.2, paddingBottom: '20px', width: "450px" }}>Proudly continuing our legacy as the oldest sporting camp in Maine.</p>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-4)', marginTop: 'var(--space-2)', flexWrap: 'wrap' }}>
+            <h1 style={{ fontSize: 'clamp(3rem, 7vw, 96px)', lineHeight: 1.0, color: 'var(--text-heading)', width: '100%', paddingBottom: '0.35em' }}>Making dreams come true on the Rapid River since 1853.</h1>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-4)', flexWrap: 'wrap' }}>
               <Button variant="accent" size="lg" arrow onClick={onReserve} style={{ whiteSpace: 'nowrap' }}>Reserve today</Button>
-              <Button variant="brown" size="lg" onClick={() => go('plan')} style={{ whiteSpace: 'nowrap' }}>Plan your trip</Button>
             </div>
             <Eyebrow color="quiet" style={{ fontSize: '20px', fontWeight: 700, color: 'rgba(45,29,7,0.5)' }}>$600 / person / day · all-inclusive</Eyebrow>
           </div>
