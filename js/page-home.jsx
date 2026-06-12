@@ -7,22 +7,23 @@
   function HomePage({ go, onReserve }) {
     return (
       <React.Fragment>
-        {/* HERO */}
-        <section className="lw-hero" data-screen-label="Hero" style={{ position: 'relative', minHeight: '92vh', display: 'flex', alignItems: 'center', overflow: 'hidden' }}>
-          <img className="lw-hero__photo" src="assets/photos/hero-dock-2.jpg" alt="Guests on the dock at golden hour, Lower Richardson Lake" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
-          <div className="lw-hero__glass" style={{ position: 'absolute', inset: 0, background: 'linear-gradient(100deg, rgba(244,241,232,0.7) 0%, rgba(244,241,232,0.52) 34%, rgba(244,241,232,0.14) 60%, rgba(244,241,232,0) 78%)', backdropFilter: 'blur(8px)', WebkitBackdropFilter: 'blur(8px)', WebkitMaskImage: 'linear-gradient(100deg, #000 0%, #000 40%, rgba(0,0,0,0) 72%)', maskImage: 'linear-gradient(100deg, #000 0%, #000 40%, rgba(0,0,0,0) 72%)' }}></div>
-          <div className="lw-hero__topfade" style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(244,241,232,0.42) 0%, rgba(244,241,232,0) 26%)' }}></div>
-          {/* Mobile-only logo: outside the inner flex so absolute positioning anchors to the section, not the bottom-aligned column */}
-          <img className="lw-hero__logo" src="assets/logos/lockup-horizontal-transparent.png" alt="Lakewood Camps — Rapid River, ME" style={{ display: 'none' }} />
-          <div className="lw-hero__inner" style={{ position: 'relative', width: '100%', maxWidth: 'var(--container-max)', margin: '0 auto', padding: 'var(--space-12) var(--container-pad)', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 'var(--space-5)' }}>
-            <img className="lw-hero__logo-desktop" src="assets/logos/lockup-horizontal-transparent.png" alt="Lakewood Camps — Rapid River, ME" style={{ height: '140px', width: 'auto', marginBottom: 'var(--space-4)' }} />
-            <h1 className="lw-hero__title" style={{ fontSize: 'clamp(2.8rem, 6vw, 88px)', lineHeight: 1.0, color: 'var(--text-heading)', maxWidth: '17ch', paddingBottom: '0.35em', margin: 0 }}>Making dreams come true on the Rapid River since 1853.</h1>
-            <p className="lw-hero__subtitle" style={{ fontSize: 'clamp(1.15rem, 1.6vw, 24px)', fontWeight: 500, color: 'rgba(56,41,14,0.72)', maxWidth: '24ch', lineHeight: 1.35, margin: 0, paddingBottom: 'var(--space-4)' }}>Proudly continuing our legacy as the oldest sporting camp in Maine.</p>
-            <div className="lw-hero__ctas" style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-4)', marginTop: 'var(--space-2)', flexWrap: 'wrap' }}>
-              <Button variant="accent" size="lg" arrow onClick={onReserve} style={{ whiteSpace: 'nowrap' }}>Reserve today</Button>
-              <div className="lw-hero__plan"><Button variant="brown" size="lg" onClick={() => go('plan')} style={{ whiteSpace: 'nowrap' }}>Plan your trip</Button></div>
+        {/* HERO — per design handoff (desktop dock + frosted glass / mobile sky switch) */}
+        <section className="lw-hero" data-screen-label="Hero" style={{ position: 'relative', minHeight: 'clamp(640px, 88vh, 1000px)', display: 'flex', alignItems: 'center', overflow: 'hidden' }}>
+          <img className="lw-hero__bg lw-hero__bg--desk" src="assets/photos/hero-dock-2.jpg" alt="Guests on the dock at golden hour, Lower Richardson Lake" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+          <img className="lw-hero__bg lw-hero__bg--mob" src="assets/photos/hero-sky-mobile.jpg" alt="Sky over Lower Richardson Lake" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', display: 'none' }} />
+          <div className="lw-hero__glass" aria-hidden="true" style={{ position: 'absolute', inset: 0, background: 'linear-gradient(100deg, rgba(244,241,232,0.70) 0%, rgba(244,241,232,0.52) 34%, rgba(244,241,232,0.14) 60%, rgba(244,241,232,0) 78%)', backdropFilter: 'blur(8px)', WebkitBackdropFilter: 'blur(8px)', WebkitMaskImage: 'linear-gradient(100deg, #000 0%, #000 40%, rgba(0,0,0,0) 72%)', maskImage: 'linear-gradient(100deg, #000 0%, #000 40%, rgba(0,0,0,0) 72%)' }}></div>
+          <div className="lw-hero__topwash" aria-hidden="true" style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(244,241,232,0.42) 0%, rgba(244,241,232,0) 26%)' }}></div>
+          <div className="lw-hero__content" style={{ position: 'relative', width: '100%', maxWidth: 'var(--container-max)', margin: '0 auto', padding: 'var(--space-12) var(--container-pad)', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 'var(--space-5)' }}>
+            <img className="lw-hero__logo" src="assets/logos/lockup-horizontal-transparent.png" alt="Lakewood Camps — Rapid River, ME" style={{ height: 'clamp(128px, 12.5vw, 168px)', width: 'auto', objectFit: 'contain', marginBottom: 'var(--space-2)' }} />
+            <div className="lw-hero__body" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 'var(--space-5)', width: '100%' }}>
+              <h1 className="lw-hero__title" style={{ fontSize: 'clamp(2.7rem, 6vw, 80px)', lineHeight: 1.0, color: 'rgb(71,59,37)', maxWidth: '17ch', paddingBottom: '0.55em', margin: 0 }}>Making dreams come true on the Rapid River since 1853.</h1>
+              <p className="lw-hero__sub" style={{ fontSize: 'clamp(1.3rem, 2.4vw, 28px)', fontWeight: 600, color: 'rgba(71,59,37,0.72)', maxWidth: '34ch', lineHeight: 1.2, paddingBottom: '20px', margin: 0 }}>Proudly continuing our legacy as the oldest sporting camp in Maine.</p>
+              <div className="lw-hero__actions" style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-4)', marginTop: 'var(--space-2)', flexWrap: 'wrap' }}>
+                <Button variant="accent" size="lg" arrow onClick={onReserve}>Reserve today</Button>
+                <Button variant="brown" size="lg" onClick={() => go('plan')}>Plan your trip</Button>
+              </div>
+              <Eyebrow color="quiet" style={{ fontSize: '20px', fontWeight: 700, letterSpacing: '0.14em', color: 'rgba(45,29,7,0.62)', textTransform: 'uppercase' }}>$600 / person / day · all-inclusive</Eyebrow>
             </div>
-            <div className="lw-hero__price"><Eyebrow color="quiet" style={{ fontSize: '20px', fontWeight: 700, color: 'rgba(45,29,7,0.5)' }}>$600 / person / day · all-inclusive</Eyebrow></div>
           </div>
         </section>
 

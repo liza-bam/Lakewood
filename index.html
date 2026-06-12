@@ -60,56 +60,19 @@
   @media (max-width: 1024px) {
     main [style*="repeat(3, 1fr)"] { grid-template-columns: repeat(2, 1fr) !important; }
   }
-  /* ----- Mobile-only hero overrides (desktop layout untouched) ----- */
+  /* ----- Mobile hero (≤760px) per design handoff: sky photo, glass hidden, sized to content ----- */
   @media (max-width: 760px) {
-    .lw-hero { min-height: 92vh !important; align-items: flex-end !important; }
-    /* Swap to the portrait dock photo on mobile */
-    .lw-hero__photo {
-      content: url("assets/photos/mobile-hero.jpg") !important;
-      object-position: center 35% !important;
-    }
-    /* Top frosted band — holds the centered logo on a light background */
-    .lw-hero__topfade {
-      inset: 0 0 auto 0 !important;
-      height: 320px !important;
-      background: linear-gradient(180deg, rgba(244,241,232,0.95) 0%, rgba(244,241,232,0.82) 60%, rgba(244,241,232,0) 100%) !important;
-      backdrop-filter: blur(10px) !important;
-      -webkit-backdrop-filter: blur(10px) !important;
-      -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 65%, rgba(0,0,0,0) 100%) !important;
-      mask-image: linear-gradient(180deg, #000 0%, #000 65%, rgba(0,0,0,0) 100%) !important;
-    }
-    .lw-hero__eyebrow,
-    .lw-hero__subtitle { display: none !important; }
-    /* Bottom frosted band */
-    .lw-hero__glass {
-      inset: auto 0 0 0 !important;
-      height: 55% !important;
-      background: linear-gradient(180deg, rgba(244,241,232,0) 0%, rgba(244,241,232,0.55) 35%, rgba(244,241,232,0.92) 100%) !important;
-      -webkit-mask-image: linear-gradient(180deg, rgba(0,0,0,0) 0%, #000 32%, #000 100%) !important;
-      mask-image: linear-gradient(180deg, rgba(0,0,0,0) 0%, #000 32%, #000 100%) !important;
-      backdrop-filter: blur(10px) !important;
-      -webkit-backdrop-filter: blur(10px) !important;
-    }
-    /* Hide both logos on mobile per direction (no upper logo on mobile) */
-    .lw-hero__logo-desktop,
-    .lw-hero__logo { display: none !important; }
-    /* Inner: full width, tight padding, sits at bottom in the glass */
-    .lw-hero__inner {
-      padding: 0 var(--space-5) var(--space-6) !important;
-      max-width: none !important;
-      gap: var(--space-3) !important;
-    }
-    .lw-hero__title {
-      font-size: clamp(3.4rem, 15vw, 112px) !important;
-      line-height: 0.95 !important;
-      max-width: none !important;
-      width: 100% !important;
-      padding-bottom: 0.1em !important;
-    }
-    .lw-hero__price > * {
-      font-size: clamp(13px, 3.2vw, 18px) !important;
-      white-space: nowrap !important;
-    }
+    .lw-hero { min-height: auto !important; flex-direction: column !important; align-items: stretch !important; }
+    .lw-hero__bg--desk { display: none !important; }
+    .lw-hero__bg--mob { display: block !important; }
+    .lw-hero__bg { object-position: center top !important; }
+    .lw-hero__glass { display: none !important; }
+    .lw-hero__topwash { background: linear-gradient(180deg, rgba(244,241,232,0.55) 0%, rgba(244,241,232,0) 32%) !important; }
+    .lw-hero__content { padding-top: var(--space-12) !important; padding-bottom: var(--space-16) !important; gap: var(--space-3) !important; }
+    .lw-hero__sub { display: none !important; }
+    .lw-hero__logo { height: clamp(86px, 24vw, 128px) !important; }
+    .lw-hero__title { font-size: clamp(2.75rem, 13.5vw, 5rem) !important; line-height: 0.98 !important; max-width: none !important; padding-bottom: 0.12em !important; }
+    .lw-hero__actions { gap: var(--space-3) !important; }
   }
   /* Mobile: single column everywhere + tighter vertical rhythm */
   @media (max-width: 760px) {
