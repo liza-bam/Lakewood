@@ -63,7 +63,11 @@
   /* ----- Mobile-only hero overrides (desktop layout untouched) ----- */
   @media (max-width: 760px) {
     .lw-hero { min-height: 92vh !important; align-items: flex-end !important; }
-    .lw-hero__photo { object-position: center 35% !important; }
+    /* Swap to the portrait dock photo on mobile */
+    .lw-hero__photo {
+      content: url("assets/photos/mobile-hero.jpg") !important;
+      object-position: center 35% !important;
+    }
     /* Top frosted band — holds the centered logo on a light background */
     .lw-hero__topfade {
       inset: 0 0 auto 0 !important;
