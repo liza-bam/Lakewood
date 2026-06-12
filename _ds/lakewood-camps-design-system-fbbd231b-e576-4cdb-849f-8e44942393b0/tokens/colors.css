@@ -1,0 +1,75 @@
+/* Lakewood Camps — color tokens
+   EXACTLY FOUR COLORS (plus white card stock), per the moodboard:
+   salmon, espresso, sand, off-white. No other shades anywhere on the site.
+   Variation comes only from transparency of these same colors.
+   No orange, no amber, no blues, no greens — color lives in photography. */
+
+:root {
+  /* ---- The palette ---- */
+  --espresso: #483A26;   /* headlines, ink, dark panels, footer text */
+  --salmon: #E8896B;     /* the single accent: CTAs, labels, links */
+  --sand: #B3AB93;       /* khaki neutral — quiet chrome */
+  --warm-grey: #ADA496;  /* warm grey — default border color */
+  --sand-light: #EFEAD9; /* light sand — content blocks */
+  --off-white: #F4F1E8;  /* dominant page background */
+  --white: #FFFFFF;      /* card stock */
+
+  /* ---- Aliases (legacy names; all collapse to the four colors) ---- */
+  --brown-900: var(--espresso);
+  --brown-800: var(--espresso);
+  --brown-700: var(--espresso);
+  --brown-500: var(--espresso);
+  --brown-100: var(--sand-light);
+  --salmon-700: var(--salmon);
+  --salmon-600: var(--salmon);
+  --salmon-400: var(--salmon);
+  --salmon-100: rgba(232, 137, 107, 0.16);
+  --sand-400: var(--sand);
+  --sand-200: var(--sand-light);
+  --sand-100: var(--sand-light);
+  --cream-50: var(--off-white);
+  --cream-100: var(--sand-light);
+  --cream-200: var(--sand-light);
+
+  /* ---- Ink — espresso at full strength or transparent, nothing else ---- */
+  --ink-900: var(--espresso);
+  --ink-600: rgba(72, 58, 38, 0.72);
+  --ink-400: rgba(72, 58, 38, 0.5);
+  --ink-inverse: var(--off-white);
+  --ink-inverse-muted: rgba(244, 241, 232, 0.72);
+
+  /* ---- Semantic aliases ---- */
+  --surface-page: var(--off-white);
+  --surface-card: var(--white);
+  --surface-block: var(--sand-light);
+  --surface-airy: var(--sand-light);
+  --surface-inverse: var(--espresso);
+
+  --text-heading: var(--espresso);
+  --text-body: var(--espresso);
+  --text-secondary: var(--ink-600);
+  --text-muted: var(--ink-400);
+  --text-inverse: var(--off-white);
+  --text-label: var(--salmon);          /* NOTE: also a font-size token in typography.css; for label COLOR reference --salmon directly */
+  --text-label-quiet: var(--ink-400);
+
+  --accent: var(--salmon);                       /* Reserve CTA */
+  --accent-hover: rgba(232, 137, 107, 0.85);
+  --action: var(--espresso);                     /* solid espresso button */
+  --action-hover: rgba(72, 58, 38, 0.9);
+  --action-alt: var(--salmon);
+  --action-alt-hover: rgba(232, 137, 107, 0.85);
+
+  /* Borders — 2px, in one of three colors only: warm grey (default),
+     espresso (strong), salmon (accent). Width lives in --border-width. */
+  --border-line: var(--warm-grey);     /* default — warm grey */
+  --border-on-white: var(--warm-grey);
+  --border-strong: var(--espresso);    /* emphasis dividers / fields on focus */
+  --border-accent: var(--salmon);      /* accent / active */
+  --border-inverse: rgba(244, 241, 232, 0.28);
+
+  --focus-ring: rgba(232, 137, 107, 0.55);
+
+  --scrim-hero: linear-gradient(180deg, rgba(72,58,38,0.10) 0%, rgba(72,58,38,0.00) 35%, rgba(72,58,38,0.48) 100%); /* @kind color */
+  --scrim-card: linear-gradient(180deg, rgba(72,58,38,0.00) 45%, rgba(72,58,38,0.66) 100%); /* @kind color */
+}

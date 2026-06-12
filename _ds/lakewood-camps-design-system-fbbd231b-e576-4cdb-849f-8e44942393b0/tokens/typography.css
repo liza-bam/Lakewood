@@ -1,0 +1,39 @@
+/* Lakewood Camps — typography tokens
+   Moodboard EXACTLY: Bebas Neue headlines & display, Inter body & UI.
+   Display is condensed uppercase, big and confident. */
+
+:root {
+  --font-display: 'Bebas Neue', 'Arial Narrow', sans-serif;
+  --font-sans: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  --font-quote: Georgia, 'Times New Roman', serif; /* testimonials only */
+
+  /* ---- Scale (desktop reference; Bebas is condensed — run it big) ---- */
+  --text-display-1: clamp(4rem, 7.5vw, 6.5rem);    /* 64–104 hero */
+  --text-display-2: clamp(2.75rem, 5vw, 4.25rem);  /* 44–68 section */
+  --text-h3: 2.25rem;     /* 36 */
+  --text-h4: 1.375rem;    /* 22 */
+  --text-body-lg: 1.1875rem; /* 19 */
+  --text-body: 1.0625rem; /* 17 */
+  --text-small: 0.9375rem;/* 15 */
+  --text-label: 0.8125rem;/* 13 — uppercase utility */
+  --text-label-sm: 0.75rem; /* 12 */
+
+  /* ---- Weights ---- */
+  --weight-display: 400;       /* Bebas Neue has one weight */
+  --weight-display-medium: 400;
+  --weight-body: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+
+  /* ---- Line heights ---- */
+  --leading-display: 0.95;
+  --leading-heading: 1.02;
+  --leading-body: 1.6;
+  --leading-tight: 1.35;
+
+  /* ---- Tracking ---- */
+  --tracking-display: 0.015em; /* Bebas wants a touch of air */
+  --tracking-body: 0;
+  --tracking-label: 0.14em;    /* uppercase labels */
+  --tracking-button: 0.08em;   /* uppercase button text */
+}

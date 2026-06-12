@@ -1,0 +1,42 @@
+/* Lakewood Camps — spacing, radii, borders, shadows, motion */
+
+:root {
+  /* ---- Spacing (4px base) ---- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+  --space-32: 128px;   /* generous section padding — let the lake breathe */
+
+  /* ---- Layout ---- */
+  --container-max: 1280px;
+  --container-pad: clamp(20px, 5vw, 64px);
+
+  /* ---- Radii — 3px everywhere. No other radius is used on the site. ---- */
+  --radius-sm: 3px;
+  --radius-button: 3px;
+  --radius-card: 3px;
+  --radius-image: 3px;
+
+  /* ---- Borders ---- */
+  --border-width: 2px;       /* 2px everywhere, consistent */
+
+  /* ---- Shadows — NONE. The UI is borders-only, no box shadows. ---- */
+  --shadow-card: none;
+  --shadow-float: none;
+  --shadow-header: none;
+
+  /* ---- Motion — calm fades and eases, no bounces ---- */
+  --ease-out: cubic-bezier(0.2, 0.6, 0.2, 1); /* @kind other */
+  --duration-fast: 160ms; /* @kind other */
+  --duration-base: 240ms; /* @kind other */
+  --duration-slow: 600ms; /* @kind other */
+}

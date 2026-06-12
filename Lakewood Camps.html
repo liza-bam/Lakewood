@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lakewood Camps — Maine's Oldest Sporting Camp</title>
+
+<link rel="stylesheet" href="_ds/lakewood-camps-design-system-fbbd231b-e576-4cdb-849f-8e44942393b0/styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="_ds/lakewood-camps-design-system-fbbd231b-e576-4cdb-849f-8e44942393b0/_ds_bundle.js"></script>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+<style>
+  html { scroll-behavior: smooth; }
+  #root { min-height: 100vh; }
+  /* Reveal-on-scroll base */
+  .lw-reveal { opacity: 0; transform: translateY(18px); transition: opacity 640ms var(--ease-out), transform 640ms var(--ease-out); }
+  .lw-reveal.is-in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    .lw-reveal { opacity: 1 !important; transform: none !important; transition: none; }
+    html { scroll-behavior: auto; }
+  }
+  /* native textarea matched to DS Input */
+  .lw-textarea {
+    font-family: var(--font-sans); font-size: var(--text-body); color: var(--text-body);
+    background: var(--surface-card); border: 2px solid var(--border-on-white);
+    border-radius: var(--radius-button); padding: 12px 14px; outline: none; resize: vertical;
+    min-height: 110px; line-height: var(--leading-body); width: 100%;
+    transition: border-color var(--duration-fast) var(--ease-out);
+  }
+  .lw-textarea:focus { border-color: var(--border-accent); }
+  ul.lw-list { margin: 0; padding: 0; list-style: none; }
+  /* Bebas Neue glyphs sit low in the line-box; reserve space so the last line never collides with the next element */
+  h1, h2, h3 { padding-bottom: 0.12em; }
+  /* keep the header wordmark on one line, drop the secondary est. tag for a clean mark */
+  header span { white-space: nowrap; }
+  header a > span + span { display: none; }
+
+  /* ---------------- Responsive breakpoints ---------------- */
+  /* Tablet: 3-up card grids become 2-up */
+  @media (max-width: 1024px) {
+    main [style*="repeat(3, 1fr)"] { grid-template-columns: repeat(2, 1fr) !important; }
+  }
+  /* Mobile: single column everywhere + tighter vertical rhythm */
+  @media (max-width: 760px) {
+    :root { --space-32: 72px; --space-24: 56px; --space-20: 52px; --space-16: 44px; --space-12: 36px; }
+    main [style*="repeat(3, 1fr)"],
+    main [style*="repeat(2, 1fr)"],
+    main [style*="1fr 1fr"],
+    main [style*="0.8fr 1.2fr"],
+    main [style*="1.15fr 0.85fr"] { grid-template-columns: 1fr !important; }
+    [role="dialog"] [style*="1fr 1fr"] { grid-template-columns: 1fr !important; }
+  }
+  /* Footer collapses */
+  @media (max-width: 900px) {
+    footer [style*="1.4fr 1fr 1fr 1fr auto"] { grid-template-columns: 1fr 1fr !important; gap: var(--space-8) !important; }
+  }
+  @media (max-width: 540px) {
+    footer [style*="1.4fr 1fr 1fr 1fr auto"] { grid-template-columns: 1fr !important; }
+  }
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel" data-presets="react" src="js/shared.jsx"></script>
+<script type="text/babel" data-presets="react" src="js/page-home.jsx"></script>
+<script type="text/babel" data-presets="react" src="js/page-camp.jsx"></script>
+<script type="text/babel" data-presets="react" src="js/page-fishing.jsx"></script>
+<script type="text/babel" data-presets="react" src="js/page-hunting.jsx"></script>
+<script type="text/babel" data-presets="react" src="js/page-wildlife.jsx"></script>
+<script type="text/babel" data-presets="react" src="js/page-plan.jsx"></script>
+<script type="text/babel" data-presets="react" src="js/page-rates.jsx"></script>
+<script type="text/babel" data-presets="react" src="js/page-events.jsx"></script>
+<script type="text/babel" data-presets="react" src="js/app.jsx"></script>
+</body>
+</html>
