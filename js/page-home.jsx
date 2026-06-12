@@ -8,13 +8,13 @@
     return (
       <React.Fragment>
         {/* HERO */}
-        <section data-screen-label="Hero" style={{ position: 'relative', minHeight: '58vh', display: 'flex', alignItems: 'flex-end', overflow: 'hidden' }}>
+        <section data-screen-label="Hero" style={{ position: 'relative', minHeight: '78vh', display: 'flex', alignItems: 'flex-end', overflow: 'hidden' }}>
           <img src="assets/photos/hero-dock-2.jpg" alt="Guests on the dock at golden hour, Lower Richardson Lake" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
-          {/* Frosted-glass gradient covering only the lower half of the image */}
-          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(244,241,232,0) 0%, rgba(244,241,232,0) 35%, rgba(244,241,232,0.65) 62%, rgba(244,241,232,0.85) 100%)', backdropFilter: 'blur(8px)', WebkitBackdropFilter: 'blur(8px)', WebkitMaskImage: 'linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 38%, #000 62%, #000 100%)', maskImage: 'linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 38%, #000 62%, #000 100%)' }}></div>
+          {/* Frosted-glass gradient covering ONLY the bottom band */}
+          <div style={{ position: 'absolute', left: 0, right: 0, bottom: 0, height: '55%', background: 'linear-gradient(180deg, rgba(244,241,232,0) 0%, rgba(244,241,232,0.55) 38%, rgba(244,241,232,0.88) 100%)', backdropFilter: 'blur(10px)', WebkitBackdropFilter: 'blur(10px)', WebkitMaskImage: 'linear-gradient(180deg, rgba(0,0,0,0) 0%, #000 38%, #000 100%)', maskImage: 'linear-gradient(180deg, rgba(0,0,0,0) 0%, #000 38%, #000 100%)' }}></div>
           <div style={{ position: 'relative', width: '100%', padding: 'var(--space-6) var(--space-5)', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 'var(--space-4)' }}>
             <img src="assets/logos/lockup-horizontal-transparent.png" alt="Lakewood Camps — Rapid River, ME" style={{ height: '72px', width: 'auto' }} />
-            <h1 style={{ fontSize: 'clamp(3rem, 7vw, 96px)', lineHeight: 1.0, color: 'var(--text-heading)', width: '100%', paddingBottom: '0.35em' }}>Making dreams come true on the Rapid River since 1853.</h1>
+            <h1 style={{ fontSize: 'clamp(3.4rem, 12vw, 168px)', lineHeight: 0.95, color: 'var(--text-heading)', width: '100%', paddingBottom: '0.25em', margin: 0 }}>Making dreams come true on the Rapid River since 1853.</h1>
             <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-4)', flexWrap: 'wrap' }}>
               <Button variant="accent" size="lg" arrow onClick={onReserve} style={{ whiteSpace: 'nowrap' }}>Reserve today</Button>
             </div>
