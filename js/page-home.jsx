@@ -16,13 +16,13 @@
           <div className="lw-hero__content" style={{ position: 'relative', width: '100%', maxWidth: 'var(--container-max)', margin: '0 auto', padding: 'var(--space-12) var(--container-pad)', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 'var(--space-5)' }}>
             <img className="lw-hero__logo" src="assets/logos/lockup-horizontal-transparent.png" alt="Lakewood Camps — Rapid River, ME" style={{ height: 'clamp(128px, 12.5vw, 168px)', width: 'auto', objectFit: 'contain', marginBottom: 'var(--space-2)' }} />
             <div className="lw-hero__body" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 'var(--space-5)', width: '100%' }}>
-              <h1 className="lw-hero__title" style={{ fontSize: 'clamp(2.7rem, 6vw, 80px)', lineHeight: 1.0, color: 'var(--off-white)', maxWidth: '17ch', paddingBottom: '0.55em', margin: 0 }}>Making dreams come true on the Rapid River since 1853.</h1>
+              <h1 className="lw-hero__title" style={{ fontSize: 'clamp(2.7rem, 6vw, 80px)', lineHeight: 1.0, color: 'rgb(71,59,37)', maxWidth: '17ch', paddingBottom: '0.55em', margin: 0 }}>Making dreams come true on the Rapid River since 1853.</h1>
               <p className="lw-hero__sub" style={{ fontSize: 'clamp(1.3rem, 2.4vw, 28px)', fontWeight: 600, color: 'rgba(244,241,232,0.92)', maxWidth: '34ch', lineHeight: 1.2, paddingBottom: '20px', margin: 0 }}>Proudly continuing our legacy as the oldest sporting camp in Maine.</p>
-              <div className="lw-hero__actions" style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-4)', marginTop: 'var(--space-2)', flexWrap: 'wrap' }}>
-                <Button variant="accent" size="lg" arrow onClick={onReserve}>Reserve today</Button>
+              <div className="lw-hero__actions" style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-4)', marginTop: 'var(--space-2)' }}>
+                <Button variant="accent" size="lg" onClick={onReserve}>Reserve today</Button>
                 <Button variant="brown" size="lg" onClick={() => go('plan')}>Plan your trip</Button>
               </div>
-              <Eyebrow color="quiet" style={{ fontSize: '20px', fontWeight: 700, letterSpacing: '0.14em', color: 'rgba(244,241,232,0.85)', textTransform: 'uppercase' }}>$600 / person / day · all-inclusive</Eyebrow>
+              <div className="lw-hero__price"><Eyebrow color="quiet" style={{ fontSize: '20px', fontWeight: 700, letterSpacing: '0.14em', color: 'rgba(244,241,232,0.85)', textTransform: 'uppercase' }}>$600 / person / day · all-inclusive</Eyebrow></div>
             </div>
           </div>
         </section>
