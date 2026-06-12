@@ -64,7 +64,12 @@
   @media (max-width: 760px) {
     .lw-hero { min-height: 50vh !important; align-items: flex-end !important; }
     .lw-hero__photo { object-position: center 78% !important; }
-    .lw-hero__topfade { display: none !important; }
+    /* Top light fade so the logo reads against a calm cream background */
+    .lw-hero__topfade {
+      inset: 0 0 auto 0 !important;
+      height: 280px !important;
+      background: linear-gradient(180deg, rgba(244,241,232,0.95) 0%, rgba(244,241,232,0.78) 55%, rgba(244,241,232,0) 100%) !important;
+    }
     .lw-hero__eyebrow,
     .lw-hero__subtitle,
     .lw-hero__plan { display: none !important; }
@@ -78,10 +83,10 @@
       backdrop-filter: blur(10px) !important;
       -webkit-backdrop-filter: blur(10px) !important;
     }
-    /* Logo pinned to top */
+    /* Logo positioned 150px down from the top of the hero */
     .lw-hero__logo {
       position: absolute !important;
-      top: var(--space-3); left: var(--space-5);
+      top: 150px; left: var(--space-5);
       height: 64px !important;
       z-index: 1;
     }
