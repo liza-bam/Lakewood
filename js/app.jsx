@@ -144,7 +144,7 @@
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 'var(--space-5)' }}>
               <button type="button" onClick={onReserve} onMouseEnter={() => setRh(true)} onMouseLeave={() => setRh(false)}
-                style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', fontFamily: 'var(--font-sans)', fontSize: 'var(--text-label)', fontWeight: 'var(--weight-semibold)', textTransform: 'uppercase', letterSpacing: 'var(--tracking-button)', color: 'var(--salmon)', background: rh ? 'rgba(232,137,107,0.10)' : 'transparent', border: '2px solid var(--salmon)', borderRadius: 'var(--radius-button)', padding: '14px 26px', cursor: 'pointer', transition: 'background var(--duration-fast) var(--ease-out)' }}>
+                style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', fontFamily: 'var(--font-sans)', fontSize: 'var(--text-label)', fontWeight: 'var(--weight-semibold)', textTransform: 'uppercase', letterSpacing: 'var(--tracking-button)', color: 'var(--salmon)', background: rh ? 'rgba(239,96,51,0.10)' : 'transparent', border: '2px solid var(--salmon)', borderRadius: 'var(--radius-button)', padding: '14px 26px', cursor: 'pointer', transition: 'background var(--duration-fast) var(--ease-out)' }}>
                 Reserve your stay <span aria-hidden="true">→</span></button>
               <div style={{ display: 'flex', gap: 'var(--space-4)', alignItems: 'center' }}>
                 <a href="https://instagram.com/LakewoodCampsMaine" aria-label="Instagram" style={{ display: 'inline-flex' }}><SocialIcon name="instagram" /></a>

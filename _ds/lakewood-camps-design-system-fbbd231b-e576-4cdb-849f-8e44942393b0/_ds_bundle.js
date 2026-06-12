@@ -326,7 +326,7 @@ const VARIANTS = {
   },
   outline: {
     bg: 'transparent',
-    bgHover: 'rgba(232,137,107,0.10)',
+    bgHover: 'rgba(239,96,51,0.10)',
     color: 'var(--salmon-600)',
     border: '2px solid var(--salmon-400)'
   },
@@ -783,7 +783,7 @@ function SiteFooter({
       textTransform: 'uppercase',
       letterSpacing: 'var(--tracking-button)',
       color: 'var(--salmon-600)',
-      background: reserveHover ? 'rgba(232,137,107,0.10)' : 'transparent',
+      background: reserveHover ? 'rgba(239,96,51,0.10)' : 'transparent',
       border: '2px solid var(--salmon-400)',
       borderRadius: 'var(--radius-button)',
       padding: '14px 26px',

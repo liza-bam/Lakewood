@@ -7,7 +7,7 @@
 :root {
   /* ---- The palette ---- */
   --espresso: #483A26;   /* headlines, ink, dark panels, footer text */
-  --salmon: #E8896B;     /* the single accent: CTAs, labels, links */
+  --salmon: #ef6033d9;   /* the single accent: CTAs, labels, links */
   --sand: #B3AB93;       /* khaki neutral — quiet chrome */
   --warm-grey: #ADA496;  /* warm grey — default border color */
   --sand-light: #EFEAD9; /* light sand — content blocks */
@@ -23,7 +23,7 @@
   --salmon-700: var(--salmon);
   --salmon-600: var(--salmon);
   --salmon-400: var(--salmon);
-  --salmon-100: rgba(232, 137, 107, 0.16);
+  --salmon-100: rgba(239, 96, 51, 0.16);
   --sand-400: var(--sand);
   --sand-200: var(--sand-light);
   --sand-100: var(--sand-light);
@@ -54,11 +54,11 @@
   --text-label-quiet: var(--ink-400);
 
   --accent: var(--salmon);                       /* Reserve CTA */
-  --accent-hover: rgba(232, 137, 107, 0.85);
+  --accent-hover: rgba(239, 96, 51, 0.85);
   --action: var(--espresso);                     /* solid espresso button */
   --action-hover: rgba(72, 58, 38, 0.9);
   --action-alt: var(--salmon);
-  --action-alt-hover: rgba(232, 137, 107, 0.85);
+  --action-alt-hover: rgba(239, 96, 51, 0.85);
 
   /* Borders — 2px, in one of three colors only: warm grey (default),
      espresso (strong), salmon (accent). Width lives in --border-width. */
@@ -68,7 +68,7 @@
   --border-accent: var(--salmon);      /* accent / active */
   --border-inverse: rgba(244, 241, 232, 0.28);
 
-  --focus-ring: rgba(232, 137, 107, 0.55);
+  --focus-ring: rgba(239, 96, 51, 0.55);
 
   --scrim-hero: linear-gradient(180deg, rgba(72,58,38,0.10) 0%, rgba(72,58,38,0.00) 35%, rgba(72,58,38,0.48) 100%); /* @kind color */
   --scrim-card: linear-gradient(180deg, rgba(72,58,38,0.00) 45%, rgba(72,58,38,0.66) 100%); /* @kind color */
