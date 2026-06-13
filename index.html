@@ -62,6 +62,20 @@
   }
   /* ----- All breakpoints: equal-width hero CTAs ----- */
   .lw-hero__actions > button { flex: 1 1 0; width: 220px; justify-content: center; }
+  /* ----- Desktop + tablet (≥761px): hero subtitle treatment ----- */
+  @media (min-width: 761px) {
+    .lw-hero__sub {
+      font-size: clamp(3.5rem, 2.4vw, 28px) !important;
+      color: rgb(255 255 255) !important;
+      max-width: 34ch !important;
+      line-height: 1.2 !important;
+      padding-bottom: 20px !important;
+      margin: 0px !important;
+      font-family: var(--font-display) !important;
+      letter-spacing: 1px !important;
+      text-shadow: 0px 0px 3px #00000085 !important;
+    }
+  }
   /* ----- Mobile hero (≤760px) per design handoff: sky photo, glass hidden, sized to content ----- */
   @media (max-width: 760px) {
     .lw-hero__actions > button { max-width: none !important; width: 100% !important; }
